@@ -41,7 +41,7 @@ export class EksBlueprintProps {
     /**
      * Kubernetes version (must be initialized for addons to work properly)
      */
-    readonly version?: KubernetesVersion = KubernetesVersion.V1_19;
+    readonly version?: KubernetesVersion = KubernetesVersion.V1_20;
 
 }
 
@@ -59,7 +59,7 @@ export class EksBlueprint extends cdk.Stack {
 
         const clusterProvider = blueprintProps.clusterProvider ?? new EC2ClusterProvider;
 
-        const clusterInfo = clusterProvider.createCluster(this, vpc, blueprintProps.version ?? KubernetesVersion.V1_19);
+        const clusterInfo = clusterProvider.createCluster(this, vpc, blueprintProps.version ?? KubernetesVersion.V1_20);
 
         const postDeploymentSteps = Array<ClusterPostDeploy>();
 
