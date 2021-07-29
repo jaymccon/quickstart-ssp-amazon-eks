@@ -36,6 +36,7 @@ export default class BlueprintConstruct extends cdk.Construct {
             }}),
             new ssp.addons.ArgoCDAddOn,
             new ssp.addons.CalicoAddOn,
+            new ssp.addons.OpaAddOn,
             new ssp.addons.MetricsServerAddOn,
             new ssp.addons.ClusterAutoScalerAddOn,
             new ssp.addons.ContainerInsightsAddOn,
